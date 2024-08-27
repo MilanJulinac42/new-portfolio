@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greetings";
 const pageTitle = "Home Page";
 ---
 
@@ -17,6 +18,7 @@ const pageTitle = "Home Page";
   <body>
     <BaseLayout pageTitle={pageTitle}>
       <h2>My home page subtitle</h2>
+      <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
     </BaseLayout>
   </body>
 </html>
